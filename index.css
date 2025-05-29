@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'arima', 'sans-serif';
+}
+:root {
+    --fs-nav-items: 1rem;
+    --fs-banner-about: 1.2rem;
+    --fs-banner-title: 4.8rem;
+    --fs-banner-button: 1rem;
+    --fs-nav-contact: 1.1rem;
+    --fs-aboutus-title: 3rem; 
+    --fs-booking-icon: 3rem;
+    --fs-booking-num: 1.9rem;
+    --fs-footer-icon: 1.5rem;
+
+
+    --color-gold: rgb(185, 140, 27);
+}
+header {
+    background-image: url(./image/banner-bg-1.jpg);
+    color: white;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    display: flex;
+    min-height: 40px;
+    padding: 30px 40px;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(60, 60, 60);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar hr {
+    border: 1px solid rgb(60, 60, 60);
+    align-self: stretch;
+}
+header .fa-phone {
+    height: max-content;
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 12px;
+}
+.logo {
+    height: 50px;
+}
+.nav-contact-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav-contact-container p {
+    font-size: var(--fs-nav-contact);
+    letter-spacing: 1.5px;
+}
+.navbar-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 1.09rem;
+}
+.navbar-list a {
+    text-decoration: none;
+    color: white;
+}
+.book-btn {
+   padding: 15px 30px; 
+   background-color: rgb(185, 140, 27);
+   border: none;
+   color: white;
+   font-size: var(--fs-nav-items);
+   font-weight: bold;
+}
+
+.banner-container {
+    height: 100vh;
+    position: relative;;
+}
+.banner-content {
+    z-index: 1;
+    max-width: 55%;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+.banner-about {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+    color: rgb(185, 140, 27);
+}
+.banner-title {
+    font-size: var(--fs-banner-title);
+    font-weight: 600;
+    line-height: 100px;
+}
+.banner-button-container {
+    display: flex;
+    gap: 40px;
+}
+.read-more-btn {
+    margin-top: 30px;
+    padding: 15px 30px; 
+   background-color: rgb(185, 140, 27);
+   border: none;
+   color: white;
+   font-size: var(--fs-banner-button);
+   font-weight: bold;
+}
+.view-service-btn {
+    margin-top: 30px;
+    padding: 15px 30px; 
+   background-color: rgba(0, 0, 0, 0.2);
+   border: 1px solid rgb(185, 140, 27);
+   color: rgb(185, 140, 27);
+   font-size: var(--fs-banner-button);
+   font-weight: bold;
+}
+.banner-png-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.banner-png-container img {
+    height: 95vh;
+    translate: 0 8px;
+}
+
+
+/* about us */
+.aboutus-container {
+    display: grid;
+    align-items: center;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* about us image */
+.aboutus-image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.aboutus-img1 {
+    margin-right: 190px;
+    z-index: 0;
+}
+.aboutus-img2 {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    right: 0;
+}
+.aboutus-img3 {
+    position: absolute;
+    z-index: 1;
+    bottom: -90px;
+    padding: 15px 0 0 15px;
+    background-color: white;
+}
+
+/* about us content */
+.aboutus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+    width: 500px;
+    gap: 10px;
+}
+.aboutus-heading {
+    color: var(--color-gold);
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+}
+.aboutus-title {
+    font-size: var(--fs-aboutus-title);
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.aboutus-content button {
+    margin-top: 40px;
+    padding: 15px 30px; 
+   background-color: var(--color-gold);
+   border: none;
+   color: white;
+   font-size: var(--fs-banner-button);
+   font-weight: bold;
+}
+.aboutus-description {
+    font-size: var(--fs-nav-items);
+}
+.aboutus-mini {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.aboutus-mini p {
+    font-size: var(--fs-banner-about);
+}
+.aboutus-mini hr {
+    align-self: stretch;
+    width: 3px;
+    background-color: var(--color-gold);
+}
+
+/* services */
+.service-container {
+    background-image: url(./image/banner-bg-2.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    padding: 100px 0;
+}
+.service-heading {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+    color: var(--color-gold);
+}
+.service-title {
+    font-size: var(--fs-aboutus-title);
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.service-grid-item {
+    display: flex;
+    flex-direction: column;
+}
+.service-grid-item p {
+    background-color: var(--color-gold);
+    text-align: center;
+    padding: 6px 0;
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+}
+
+
+/* working */
+.working {
+    height: 75vh;
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+}
+.working-container {
+    background-image: url(./image/working.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.working-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+    background-color: var(--color-gold);
+    gap: 15px;
+    padding: 50px;
+}
+.working-title {
+    font-size: var(--fs-aboutus-title);
+    font-weight: 600;
+    line-height: 60px;
+}
+.working-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+.working-grid hr {
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+.working-grid-item {
+    display: flex;
+    justify-content: space-between;
+}
+.working-day {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+}
+.working-date {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+}
+.working-button {
+    margin-top: 40px;
+    padding: 15px 30px; 
+   border: 1px solid white;
+   background-color: var(--color-gold);
+   color: white;
+   font-size: var(--fs-banner-button);
+   font-weight: bold;
+}
+
+/* booking */
+.booking {
+    position: relative;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content:center;
+    height: 60vh;
+    background-size: cover;
+    background-color: rgb(0, 0, 0, 0.9);
+}
+.booking-img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 700px;
+}
+
+
+.booking-heading {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+    color: var(--color-gold);
+}
+.booking-title {
+    color: white;
+    font-size: var(--fs-aboutus-title);
+    font-weight: 600;
+    line-height: 60px;
+}
+.booking-button {
+    margin-top: 40px;
+    padding: 15px 30px; 
+   background-color: var(--color-gold);
+   border: none;
+   color: white;
+   font-size: var(--fs-banner-button);
+   font-weight: bold;
+}
+
+.booking-box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 25px 30px;
+    max-width: 400px;
+    gap: 10px;
+    border-radius: 15px;
+}
+.booking-box i {
+    display: flex;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: var(--fs-booking-icon);
+    color: var(--color-gold);
+    background-color: rgba(185, 140, 27, 0.1);
+    padding: 2rem;
+}
+.booking-call {
+    font-size: var(--fs-banner-about);
+    font-weight: 600;
+}
+.booking-num {
+    font-size: var(--fs-booking-num);
+    font-weight: 600;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+}
+.footer-container {
+    color: white;
+    background-color: #0f1212;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 300px 300px 300px;
+    width: 100%;
+    padding: 60px 0;
+}
+.sec-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #cccccc;
+}
+.sec-1 p {
+    font-size: var(--fs-banner-button);
+}
+.sec-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #999999;
+}
+.contact-item p {
+    font-size: var(--fs-banner-button);
+}
+.sec-2-heading {
+    font-size: var(--fs-booking-num);
+    font-weight: 600;
+    color: var(--color-gold);
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.sec-2 i {
+    font-size: var(--fs-banner-button);
+    color: var(--color-gold);
+}
+
+.sec-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.social-container {
+    display: flex;
+    gap: 20px;
+    font-size: var(--fs-footer-icon);
+    color: #565656;
+}
+.sec-3 i {
+    border: 1px solid #565656;
+    padding: 10px;
+    border-radius: 50%;
+}
+.sec-3 p {
+    font-size: var(--fs-booking-num);
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.end-footer {
+    display: flex;
+    height: 100px;
+    font-size: var(--fs-banner-button);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #161919;
+}
+.end-footer a {
+    color: var(--color-gold);
+}

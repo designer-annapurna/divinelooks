@@ -18,11 +18,212 @@
 
     --color-gold: rgb(185, 140, 27);
 }
+
+@media (max-width: 550px) {
+    :root {
+        --fs-nav-items: 1rem;
+        --fs-banner-about: 1rem;
+        --fs-banner-title: 2rem;
+        --fs-banner-button: 0.8rem;
+        --fs-nav-contact: 1.1rem;
+        --fs-aboutus-title: 2rem; 
+        --fs-booking-icon: 2rem;
+        --fs-booking-num: 1.5rem;
+        --fs-footer-icon: 1rem;
+    }
+
+    /* navbar */
+    .navbar {
+        padding: 20px !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+    .navbar hr {
+        display: none;
+    }
+    .nav-contact-container {
+        display: none !important;
+    }
+    .navbar-option-container {
+        display: none;
+    }
+    .navbar-logo-container img {
+        width: 120px;
+        height: auto;
+    }
+    .hamburger {
+        display: inline-block !important;
+        font-size: 1.3rem !important;
+    }
+
+    /* banner */
+    .banner-container {
+        height: 80vh !important;
+    }
+    .banner-content {
+        gap: 20px !important;
+        max-width: unset !important;
+        width: 90%  !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center;
+    }
+    .banner-title {
+        margin-top: 20px !important;
+        line-height: 40px !important;
+    }
+    .banner-png-container {
+        display: none;
+    }
+    .banner-button-container {
+        margin-top: 70px !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .banner-button-container * {
+        margin: auto !important;
+    }
+
+    /* aboutus */
+    .aboutus-container {
+        grid-template-columns: unset !important;
+        grid-template-rows: 1fr 1fr !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        margin-bottom: 50px !important;
+        height: auto !important;
+        gap: 0;
+    }
+
+    /* aboutus images */
+    .aboutus-image-container {
+        flex-direction: row-reverse !important;
+        justify-content: start !important;
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    .aboutus-img1 {
+        max-width: 65vw;
+        margin: 0 !important;
+    }
+    .aboutus-img2 {
+        max-width: 30vw;
+        right: 0 !important;
+    }
+    .aboutus-img3 {
+        max-width: 40vw;
+        right: 0 !important;
+        bottom: -40px !important;
+    }
+
+    /* aboutus content */
+    .aboutus-content {
+        width: 100% !important;
+        height: max-content !important;
+
+    }
+    .aboutus-title {
+        line-height: 40px !important;
+    }
+
+    /* services */
+    .service-container {
+        text-align: center;
+        margin: 0 !important;
+        padding: 50px 5px 100px 5px !important;
+        gap: 10px !important;    
+        background-size: cover !important;
+    }
+    .service-title {
+        line-height: 40px !important;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 45vw) !important;
+        justify-content: space-around;
+        column-gap: 10px !important;
+        row-gap: 10px !important;
+    }
+    .service-grid-item p {
+        padding: 3px 0 !important;
+    }
+
+    /* working */
+    .working-container {
+        background-position: right !important;
+    }
+    .working {
+        grid-template-columns: unset !important ;
+        grid-template-rows: 0.8fr 1fr !important;
+        margin: 0 !important;
+        height: unset !important;
+    }
+    .working-content {
+        padding: 60px 30px !important;
+        min-height: 100% !important;
+        align-items: center !important;
+    }
+
+    /* booking */
+    .booking {
+        flex-direction: column !important;
+        height: unset !important;
+        gap: 30px !important;
+        padding: 50px 0 !important;
+    }
+    .booking-img {
+        object-fit: cover !important;
+    }
+
+    .booking-container {
+        padding: 0 10px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    .booking-title {
+        line-height: 40px !important;
+    }
+    .booking-button {
+        margin-top: 40px !important;
+    }
+
+    /* footer */
+    .footer-container {
+        grid-template-columns: unset !important;
+        grid-template-rows: repeat(3, 1) !important;
+        gap: 30px !important;
+        padding: 20px !important;
+    }
+    .footer-container * {
+        align-items: start !important;
+        gap: 10px !important;
+    }
+    .sec-1 {
+        gap: 20px !important;
+    }
+    
+
+    .sec-3 i {
+        padding: 5px !important;
+    }
+
+    /* end footer */
+    .end-footer {
+        padding: 0 20px !important;
+        text-align: center !important;
+        height: 80px !important;
+    }
+}
+
+
+
+
+
 header {
     background-image: url(./image/banner-bg-1.jpg);
     color: white;
     background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
 }
@@ -77,6 +278,7 @@ header .fa-phone {
     font-size: 1.09rem;
 }
 .navbar-list a {
+    cursor: pointer;
     text-decoration: none;
     color: white;
 }
@@ -91,8 +293,28 @@ header .fa-phone {
 
 .banner-container {
     height: 100vh;
-    position: relative;;
+    position: relative;
 }
+.hamburger-menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    color: black;
+    z-index: 10;
+    top: 0;
+}
+.hamburger-menu :nth-child(even) {
+    background-color: rgb(248, 248, 248);
+    padding: 10px 35px;
+}
+.hamburger-item {
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: var(--fs-banner-about);
+    border-bottom: 0.5px solid rgb(190, 190, 190);
+}
+
 .banner-content {
     z-index: 1;
     max-width: 55%;
@@ -117,24 +339,23 @@ header .fa-phone {
 .banner-button-container {
     display: flex;
     gap: 40px;
+    margin-top: 30px;
 }
 .read-more-btn {
-    margin-top: 30px;
     padding: 15px 30px; 
-   background-color: rgb(185, 140, 27);
-   border: none;
-   color: white;
-   font-size: var(--fs-banner-button);
-   font-weight: bold;
+    background-color: rgb(185, 140, 27);
+    border: none;
+    color: white;
+    font-size: var(--fs-banner-button);
+    font-weight: bold;
 }
 .view-service-btn {
-    margin-top: 30px;
     padding: 15px 30px; 
-   background-color: rgba(0, 0, 0, 0.2);
-   border: 1px solid rgb(185, 140, 27);
-   color: rgb(185, 140, 27);
-   font-size: var(--fs-banner-button);
-   font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(185, 140, 27);
+    color: rgb(185, 140, 27);
+    font-size: var(--fs-banner-button);
+    font-weight: bold;
 }
 .banner-png-container {
     position: absolute;
@@ -284,7 +505,6 @@ header .fa-phone {
     background-image: url(./image/working.jpg);
     background-position: center;
     background-size: cover;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

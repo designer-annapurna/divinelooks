@@ -40,3 +40,26 @@ document.querySelectorAll('.banner-button-container button').forEach(item => {
         })
     })
 });
+
+document.querySelector('.play-icon').addEventListener('click', () => {
+    document.querySelector('.yt-player').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+})
+document.querySelector('.yt-close-button').addEventListener('click', () => {
+    let element = document.querySelector('.yt-player')
+    stopVideo(element);
+    element.style.display = 'none';
+    document.body.style.overflow = 'auto';
+})
+
+var stopVideo = function ( element ) {
+	var iframe = element.querySelector( 'iframe');
+	var video = element.querySelector( 'video' );
+	if ( iframe ) {
+		var iframeSrc = iframe.src;
+		iframe.src = iframeSrc;
+	}
+	if ( video ) {
+		video.pause();
+	}
+};

@@ -11,6 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="yt-player" style="display: none;">
+        <div class="yt-frame-container">
+            <i class="fa-solid fa-close yt-close-button"></i>
+            <iframe src="https://www.youtube.com/embed/5xZaKt0X6r0?si=HkQ1vVUVS0np77kQ&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
     <header>
         <div class="navbar" id="home-scroll">
             <div class="navbar-logo-container">
@@ -143,10 +149,13 @@
                 </div>
             </div> 
         </div>
+        
         <div class="working">
             <div class="working-container">
+                <i class="play-icon fa-solid fa-circle-play"></i>
             </div>
             <div class="working-content">
+                <p class="working-heading">Schedule</p>
                 <p class="working-title">Working Hours</p>
                 <p class="working-description">We are open 7 days a week from 8am to 9pm. Please check our social media for any updates or changes to our schedule.</p>
                 <div class="working-grid">

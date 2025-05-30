@@ -20,7 +20,7 @@
     --color-gold: rgb(185, 140, 27);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 2000px) {
     :root {
         --fs-nav-items: 1rem;
         --fs-banner-about: 1rem;

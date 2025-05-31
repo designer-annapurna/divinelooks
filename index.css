@@ -354,6 +354,7 @@ header .fa-phone {
     position: relative;
 }
 .hamburger-menu {
+    cursor: pointer;
     width: 100%;
     position: absolute;
     background-color: white;

@@ -30,8 +30,6 @@ document.querySelectorAll('.hamburger-item').forEach(item => {
 // making navbar items scroll smoothly on pc
 document.querySelectorAll('.navbar-list a').forEach(item => {
     item.addEventListener('click', () => {
-        let menu = document.querySelector('.hamburger-menu');
-        
         document.querySelector(`#${item.classList[0]}`).scrollIntoView({
             behavior: 'smooth'
         })
@@ -80,3 +78,8 @@ var stopVideo = function ( element ) {
 		video.pause();
 	}
 };
+
+// redirecting to aboutus page
+document.querySelector('.aboutus-btn').addEventListener('click', () => {
+    location.href = 'about.html';
+})

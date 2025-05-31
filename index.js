@@ -1,28 +1,33 @@
+
+// making navbar open and close with animations
 let menuButton = document.querySelector('.hamburger');
 let isopen = false;
 menuButton.addEventListener('click', () => {
     let menu = document.querySelector('.hamburger-menu');
     if (isopen) {
-        menu.style.display = 'none';
+        menu.classList.remove('menu-open-anim');
+        menu.classList.add('menu-close-anim');
         isopen = false;
     } else {
-        menu.style.display = 'block';
+        menu.classList.remove('menu-close-anim');
+        menu.classList.add('menu-open-anim');
         isopen = true;
     }
 })
-
+// making navbar items scroll smoothly and closing navbar on click
 document.querySelectorAll('.hamburger-item').forEach(item => {
     item.addEventListener('click', () => {
         let menu = document.querySelector('.hamburger-menu');
-        menu.style.display = 'none';
+        menu.classList.remove('menu-open-anim');
+        menu.classList.add('menu-close-anim');
         isopen = false;
-        
         document.querySelector(`#${item.classList[1]}`).scrollIntoView({
             behavior: 'smooth'
         })
     })
 })
 
+// making navbar items scroll smoothly on pc
 document.querySelectorAll('.navbar-list a').forEach(item => {
     item.addEventListener('click', () => {
         let menu = document.querySelector('.hamburger-menu');
@@ -41,6 +46,18 @@ document.querySelectorAll('.banner-button-container button').forEach(item => {
     })
 });
 
+// making youtube player  
+    let index = 0;
+    document.querySelectorAll('.playicon-anim').forEach(item => {
+        if(index == 0) {
+            setTimeout(() => {
+            item.style.animation = 'playicon 3s linear infinite';
+        }, 1500);
+        index++;
+        } else {
+            item.style.animation = 'playicon 3s linear infinite';
+        }
+    })
 document.querySelector('.play-icon').addEventListener('click', () => {
     document.querySelector('.yt-player').style.display = 'flex';
     document.body.style.overflow = 'hidden';

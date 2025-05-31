@@ -19,6 +19,9 @@
 
     --color-gold: rgb(185, 140, 27);
 }
+button {
+    cursor: pointer;
+}
 
 @media (max-width: 550px) {
     :root {
@@ -185,6 +188,9 @@
     .working-grid hr {
         border: 1px dashed rgba(0, 0, 0, 0.5) !important;
     }
+    .working-button {
+        border: 1px solid var(--color-gold) !important;
+    }
 
     /* booking */
     .booking {
@@ -327,7 +333,11 @@ header .fa-phone {
 .navbar-list a {
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: white;   
+    transition: all .3s ease-in-out;
+}
+.navbar-list a:hover {
+    color: var(--color-gold);
 }
 .book-btn {
    padding: 15px 30px; 
@@ -336,6 +346,7 @@ header .fa-phone {
    color: white;
    font-size: var(--fs-nav-items);
    font-weight: bold;
+   
 }
 
 .banner-container {
@@ -343,7 +354,6 @@ header .fa-phone {
     position: relative;
 }
 .hamburger-menu {
-    display: none;
     width: 100%;
     position: absolute;
     background-color: white;
@@ -351,9 +361,12 @@ header .fa-phone {
     z-index: 10;
     top: 0;
 }
+
+
 .hamburger-menu :nth-child(even) {
     background-color: rgb(248, 248, 248);
     padding: 10px 35px;
+    
 }
 .hamburger-item {
     padding: 10px 30px;
@@ -440,12 +453,14 @@ header .fa-phone {
     z-index: 2;
     top: 20px;
     right: 0;
+    background-color: white;
+    padding: 5px 0 5px 5px;
 }
 .aboutus-img3 {
     position: absolute;
     z-index: 1;
     bottom: -90px;
-    padding: 15px 0 0 15px;
+    padding: 10px 0 0 10px;
     background-color: white;
 }
 
@@ -473,7 +488,6 @@ header .fa-phone {
     margin-top: 40px;
     padding: 15px 30px; 
    background-color: var(--color-gold);
-   border: none;
    color: white;
    font-size: var(--fs-banner-button);
    font-weight: bold;
@@ -549,7 +563,6 @@ header .fa-phone {
     grid-template-columns: 1.3fr 1fr;
 }
 .working-container {
-    position: relative;
     background-image: url(./image/working.jpg);
     background-position: center;
     background-size: cover;
@@ -558,10 +571,7 @@ header .fa-phone {
     justify-content: center;
 }
 .play-icon {
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    position: absolute;
+    position: relative;
     font-size: var(--fs-play-icon);
     color: white;
     background-color: var(--color-gold);
@@ -782,4 +792,98 @@ footer {
 }
 .end-footer a {
     color: var(--color-gold);
+}
+
+
+/* handling animations */
+
+/* 1 -> button animations */
+.anim-box {
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+}
+button i {
+    margin-left: 5px
+}
+.anim-button p {
+    position: relative;
+}
+.anim-button {
+    position: relative;
+    overflow: hidden;
+    transition: color .3s linear;
+}
+.anim-button:hover {
+    .anim-box {
+        opacity: 1;
+        transform: scale(500, 300);
+    }
+    color: var(--color-gold);
+}
+.aboutus-btn {
+    border: 1px solid var(--color-gold);
+}
+
+/* navbar animation */
+.hamburger-menu {
+    transform: scaleY(0);
+}
+.menu-open-anim {
+    animation: slidedown .3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.menu-close-anim {
+    animation: slideup .3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slidedown {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
+@keyframes slideup {
+    0% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+}
+
+
+/* yt player animation */
+.playicon-anim {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1) translate(-50%, -50%);
+    border: 1px solid white;
+    
+}
+@keyframes playicon {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        border: 0.5px solid rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        border: 0.5px solid rgba(48, 48, 48, 0);
+    }
 }
